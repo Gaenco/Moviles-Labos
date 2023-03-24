@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="height_title">Height</string>
+    <string name="weight_title">Weight</string>
+    <string name="hint_weight_value">70</string>
+    <string name="kg_text">kg</string>
+    <string name="hint_height">178</string>
+    <string name="cm_text">cm</string>
+    <string name="calculate_button">CALCULATE</string>
+    <string name="weight_class">Healthy</string>
+    <string name="BMI_value">21.78</string>
+    <string name="normal_range">Normal range is (18.5 - 24.9)</string>
+</resources>
