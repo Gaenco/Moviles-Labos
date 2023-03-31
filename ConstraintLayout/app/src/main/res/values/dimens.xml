@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_gap">8dp</dimen>
+    <dimen name="money_width">120dp</dimen>
+    <dimen name="money_height">110dp</dimen>
+</resources>
