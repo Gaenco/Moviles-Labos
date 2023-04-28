@@ -1,7 +1,8 @@
-package com.cortezjoya.labo5
+package com.cortezjoya.labo5.ui;
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.cortezjoya.labo5.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
