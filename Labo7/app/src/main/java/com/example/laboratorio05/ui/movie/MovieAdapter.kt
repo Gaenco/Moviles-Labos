@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.laboratorio05.R
 import com.example.laboratorio05.data.model.MovieModel
 
-class MovieAdapter : RecyclerView.Adapter<MovieViewHolder>() {
+class MovieAdapter(private val clickListener: (MovieModel) -> Unit) : RecyclerView.Adapter<MovieViewHolder>() {
 
      private var data: List<MovieModel>? = null
 
@@ -30,7 +30,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieViewHolder>() {
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         data?.let {
             val movie = it[position]
-            holder.bind(movie)
+            holder.bind(movie, clickListener)
         }
     }
 
