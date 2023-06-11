@@ -28,15 +28,14 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // TODO: Uncomment
-        // setTokenOnView()
+
+         setTokenOnView()
     }
 
-    // TODO: Create a function to set the token on the view
-    /*
+
     private fun setTokenOnView() {
         val tokenValue = app.getToken()
         binding.nameTextView.text = tokenValue
     }
-     */
+
 }

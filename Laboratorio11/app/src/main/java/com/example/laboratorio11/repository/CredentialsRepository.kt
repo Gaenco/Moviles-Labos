@@ -9,7 +9,35 @@ import java.io.IOException
 
 class CredentialsRepository(private val api: AuthService) {
 
-    // TODO: Create a function to login using the AuthService and return an ApiResponse
+    suspend fun login(email: String, password: String): ApiResponse<String> {
 
-    // TODO: Create a function to register using the AuthService and return an ApiResponse
+        try {
+            val response = api.login(LoginRequest(email, password))
+            return ApiResponse.Success(response.token)
+        } catch (e: HttpException) {
+            if (e.code() == 400) {
+                return ApiResponse.ErrorWithMessage("Invalid email or password")
+            }
+            return ApiResponse.Error(e)
+        } catch (e: IOException) {
+            return ApiResponse.Error(e)
+        }
+    }
+
+    suspend fun register(name: String, email: String, password: String): ApiResponse<String> {
+
+        try {
+            val response = api.register(RegisterRequest(name, email, password))
+            return ApiResponse.Success(response.message)
+        } catch (e: HttpException) {
+            if (e.code() == 400) {
+                return ApiResponse.ErrorWithMessage("Invalid name, email or password")
+            }
+            return ApiResponse.Error(e)
+        } catch (e: IOException) {
+            return ApiResponse.Error(e)
+        }
+    }
+
+
 }
